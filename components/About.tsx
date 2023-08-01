@@ -10,7 +10,7 @@ const schema = yup.object().shape({
   heading: yup.string().required('First name is required'),
 });
 
-export default function Home() {
+export default function About() {
   const [htmlCode, setHtmlCode] = useState(null);
   const [tagValue, setTagValue] = useState('');
   const [metaTitle, setMetaTitle] = useState('');
@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
     <div className='w-full p-10'>
-      <h1 className='text-3xl font-semibold'>Home Page</h1>
+      <h1 className='text-3xl font-semibold'>About Page</h1>
       <div className='flex'>
         <div className='w-full'>
           <div className='w-full h-fit mt-5 px-7 pt-6 pb-10 shadow-md ring-1 ring-black ring-opacity-5'>

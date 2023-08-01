@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 
 function contact() {
   return (
-    <div>
+    <div className='flex'>
       <Navbar />
       contact
     </div>

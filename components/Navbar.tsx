@@ -14,73 +14,6 @@ import logo from '@/public/assets/logo/logo.svg';
 const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = useState(true);
-  const navData = [
-    {
-      path: '/dashboard',
-      title: 'Dashboard',
-      icon: (
-        <IoStatsChart
-          size={20}
-          className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
-        />
-      ),
-    },
-    {
-      path: '/pages',
-      title: 'Pages',
-      icon: (
-        <SiPowerpages
-          size={20}
-          className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
-        />
-      ),
-    },
-    {
-      path: '/about',
-      title: 'About',
-      icon: (
-        <BsInfoSquareFill
-          size={20}
-          className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
-        />
-      ),
-    },
-    {
-      path: '/home',
-      title: 'Home',
-      icon: (
-        <GoHomeFill size={20} className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`} />
-      ),
-    },
-    {
-      path: '/team',
-      title: 'Team',
-      icon: (
-        <RiTeamFill size={20} className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`} />
-      ),
-    },
-    {
-      path: '/contact',
-      title: 'Contact',
-      icon: (
-        <MdContactPage
-          size={20}
-          className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
-        />
-      ),
-    },
-    {
-      path: '/users',
-      title: 'Users',
-      icon: (
-        <HiUsers size={20} className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`} />
-      ),
-    },
-  ];
-
-  const handleClick = (event: any) => {
-    event.preventDefault();
-  };
 
   const handleLogOut = () => {
     localStorage.clear();
@@ -91,7 +24,7 @@ const Navbar = () => {
       <div
         className={`${
           open ? 'w-20 lg:w-60' : 'w-20'
-        } fixed bg-white h-screen pt-4 duration-300 text-black shadow-md`}
+        } fixed bg-white h-full pt-4 duration-300 text-black shadow-md`}
       >
         <div className='flex gap-x-4 items-center ml-5 mt-2'>
           <Image
@@ -188,7 +121,7 @@ const Navbar = () => {
                   >
                     <GoHomeFill
                       size={20}
-                      className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
+                      className={`${open ? 'lg:ml-0' : 'ml-3'}`}
                     />
                     {open && (
                       <p className='origin-left hidden lg:block duration-200 mt-1 pl-5 text-base'>
@@ -209,7 +142,7 @@ const Navbar = () => {
                   >
                     <BsInfoSquareFill
                       size={20}
-                      className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
+                      className={`${open ? 'lg:ml-0' : 'ml-3'}`}
                     />
                     {open && (
                       <p className='origin-left hidden lg:block duration-200 mt-1 pl-5 text-base'>
@@ -230,7 +163,7 @@ const Navbar = () => {
                   >
                     <RiTeamFill
                       size={20}
-                      className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
+                      className={`${open ? 'lg:ml-0' : 'ml-3'}`}
                     />
 
                     {open && (
@@ -252,7 +185,7 @@ const Navbar = () => {
                   >
                     <MdContactPage
                       size={20}
-                      className={`${open ? 'ml-3 lg:ml-0' : 'ml-3'}`}
+                      className={`${open ? 'lg:ml-0' : 'ml-3'}`}
                     />
                     {open && (
                       <p className='origin-left hidden lg:block duration-200 mt-1 pl-5 text-base'>
